@@ -30,14 +30,14 @@ def start_clicking():
     global running
     while running:
         if not stary_w_oknie_zycia:
-            pyautogui.click(burton=btn)
+            pyautogui.click(button=btn)
         time.sleep(interval)
 
 def toggle_clicking():
     global running, klikanie
     if running:
         running = False
-        if klikanie:
+        if klikanie and klikanie.is_alive(): 
             klikanie.join() 
         start_burton.config(state=tk.NORMAL)
         stop_burton.config(state=tk.DISABLED)
