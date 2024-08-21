@@ -1,0 +1,1 @@
+Pod enter wyłaczasz / włączasz
